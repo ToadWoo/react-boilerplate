@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-// import './styles/app.sass'
+import './styles/app.scss'
 
 
 ReactDOM.render(

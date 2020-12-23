@@ -16,6 +16,11 @@ module.exports = {
   },
   resolve: {
     extensions: [ '.tsx', '.ts', '.jsx', '.js'],
+    alias: {
+      '@/pages': path.join(__dirname, 'src/pages'),
+      '@/components': path.join(__dirname, 'src/components'),
+      '@/images': path.join(__dirname, 'src/images')
+    }
   },
   module: {
     rules: [
@@ -57,7 +62,7 @@ module.exports = {
         use: [{
             loader: `file-loader`,
             options: {
-                name: `images/[name].[hash:8].[ext]`,
+                name: `images/[name].[contenthash:8].[ext]`,
                 esModule: false,
             },
         }],
@@ -66,7 +71,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/template/index.html'
+      template: './public/index.html'
     }),
     new ForkTsCheckerWebpackPlugin(),
     isEnvDevelopment && new CleanWebpackPlugin(),
@@ -97,7 +102,9 @@ module.exports = {
       ],
   },
   devServer: {
+    writeToDisk: true,
     hot: true,
+    historyApiFallback: true
   }
 };
 

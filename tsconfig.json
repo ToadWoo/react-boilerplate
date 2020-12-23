@@ -12,8 +12,9 @@
       "moduleResolution": "Node",
       "sourceMap": true,
       "paths": {
-        "@images/*": ["./src/images/*"],
-        "@components/*": ["./src/components/*"]
+        "@/images/*": ["./src/images/*"],
+        "@/components/*": ["./src/components/*"],
+        "@/pages/*": ["./src/pages/*"]
       }
     },
     "include": ["src"]
