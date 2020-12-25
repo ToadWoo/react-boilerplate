@@ -1,10 +1,5 @@
-import React from "react";
+import React from 'react'
 
-export function FunctionNamed()  {
-    return (
-        <div>
-            FunctionNamed
-        </div>
-    );
+export function FunctionNamed() {
+  return <div>FunctionNamed</div>
 }
-
