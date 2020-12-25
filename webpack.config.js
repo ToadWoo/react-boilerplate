@@ -14,6 +14,9 @@ module.exports = {
   entry: {
     app: './src/index.tsx',
   },
+  output: {
+    path: path.join(__dirname, 'dist'),
+  },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
     alias: {

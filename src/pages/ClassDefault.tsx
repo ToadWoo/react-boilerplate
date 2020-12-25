@@ -13,7 +13,7 @@ class ClassDefault extends React.Component {
     return (
       <>
         <h1>count: {this.state.count}</h1>
-        <button onClick={this.add.bind(this)}>click</button>
+        <button onClick={this.add}>click</button>
       </>
     )
   }
